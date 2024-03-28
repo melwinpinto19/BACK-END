@@ -1,0 +1,6 @@
+    lec-1
+->import and exports
+->node js story
+->npm
+->routing
+->express (nodemon package,running the server)
