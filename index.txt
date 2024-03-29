@@ -4,3 +4,14 @@
 ->npm
 ->routing
 ->express (nodemon package,running the server)
+
+    lec-2
+->What is express and why ?
+->route parameters
+->request and response
+->ejs setup and using it in the js file through render mehod
+
+    lec-3
+->express generator(express app-name --view=ejs)
+->mongodb
+->sessions & cookies

@@ -1,4 +1,4 @@
-// nodemon is the package which reduces the burden of restarting the server again and gain
+// nodemon is the package which reduces the burden of restarting the server again and again
 
 const express = require("express");
 const app = express();

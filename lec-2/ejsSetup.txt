@@ -1,0 +1,21 @@
+ejs is a html file with additional properties such as dynamic variables etc
+        ejs setup
+->install ejs
+
+->app.set("view engine", "ejs");
+
+->make views folder in the same directory and save the ejs files inside install
+eg: views/index.ejs
+
+->using it in the program:
+res.render("<file-name>") -extension is not needed
+eg:res.render("index");
+
+
+using the variables inside ejs file:
+<!-- using parameters -->(index.ejs)
+Hello I am <%=name%>
+
+pssing the parameters from the js file:
+res.render("index",{name:req.params.user});
+

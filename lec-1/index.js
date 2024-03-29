@@ -7,7 +7,7 @@ let data = require("./script");
 
 /*
 https://google.com/feed/post
-here '/feed', '/post' is an route
+here '/feed', '/feed/post' is an route
 
 GET route (the data is visible in the url) eg:search in google
 POST route(the data is not visible in the url) eg:form submission
