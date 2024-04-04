@@ -2,12 +2,10 @@ var express = require("express");
 var router = express.Router();
 let user = require("./users");
 
-/* GET home page. */
 router.get("/create", async function (req, res, next) {
-  // res.render("index");
   const data = await user.create({
     userName: "hfhdf",
-    name: "Harsha",
+    name: "Melwin",
     id: 102,
   });
   res.send(data);
@@ -31,7 +29,7 @@ router.get("/delete", async (req, res) => {
 // cookies and sessions:
 /*
 cookie - browser [res.cookie(),res.clearCookie(),req.cookies]
-session -server
+session -server  [req.session.key=val,req.session,req.session.destroy(()=>{})]
 */
 
 // cookies:
@@ -62,6 +60,12 @@ router.get("/setSession/", (req, res) => {
 router.get("/getSession/", (req, res) => {
   // getting the session
   res.send(req.session);
+});
+
+router.get("/destroy/", (req, res) => {
+  req.session.destroy((err) => {});
+  res.send("destroyed");
+  // res.send("Destroyed!");
 });
 
 module.exports = router;

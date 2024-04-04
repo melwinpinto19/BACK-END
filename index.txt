@@ -14,4 +14,9 @@
     lec-3
 ->express generator(express app-name --view=ejs)
 ->mongodb
-->sessions & cookies
+->sessions & cookies(express-session)
+
+    lec-4
+->flash messages(flash-connnect)
+->Intermedaite monogo
+->Authentication & Authoriztion(passport,passport-local,passport-local,mongoose) ->Auth folder
