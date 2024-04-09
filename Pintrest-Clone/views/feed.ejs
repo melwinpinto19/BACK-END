@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/feed.css" />
+  </head>
+  <body>
+    <h1>Feeds</h1>
+    <div class="container">
+      <% posts.forEach(function(obj){ %>
+      <div class="card">
+        <div class="card-top">
+          <img src="/images/DP/<%=obj.user.dp%>" alt="--" class="left" />
+          <div class="right"><%=obj.user.username%></div>
+        </div>
+        <img src="/images/uploads/<%= obj.imageUrl %>" alt="acs" class="i-g" />
+        <div
+          style="
+            background-color: aqua;
+            margin: 0;
+            border-radius: 0 0 15px 15px;
+          "
+          class="bottom"
+        >
+          <%= obj.postText %>
+          <form action="/save" method="post">
+            <input type="submit" value="+" name=""/>
+          </form>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

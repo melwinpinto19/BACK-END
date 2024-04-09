@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
+  </head>
+  <body>
+    <div id="card" style="margin-top: 10px">
+      <% if(user.dp!="") { %>
+      <img id="avatar" src="/images/DP/<%=user.dp %>" alt="avatar" />
+      <% } else { %>
+      <div id="avatar-div" style="border: 1px solid">
+        <!-- <div class="c"><i class="ri-camera-line"></i></div> -->
+        <form
+          action="/uploadDP"
+          id="f1"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <input type="file" name="file" id="" style="width: 80%" />
+          <input type="submit" value="upload" id="u1" />
+        </form>
+      </div>
+      <% } %>
+      <div id="info">
+        <p id="name"><%=user.username%></p>
+        <p id="activity"><%=user.fullname%></p>
+        <p id="activity"><%=user.email%></p>
+        <div id="stats">
+          <p class="stats-text"></p>
+
+          <p class="stats-text">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z"
+              />
+            </svg>
+            <span><%=user.posts.length%></span>
+            posts
+          </p>
+        </div>
+        <p id="btn">Follow</p>
+      </div>
+    </div>
+    <!-- uploading file -->
+    <form
+      action="/upload"
+      method="post"
+      enctype="multipart/form-data"
+      id="form2"
+    >
+      <h1>Upload Post</h1>
+      <input
+        type="text"
+        name="caption"
+        id="cap"
+        placeholder="Enter the caption"
+        style="padding: 5px 40px"
+      />
+      <div class="mb-3">
+        <input class="form-control" type="file" id="formFile" name="file" />
+      </div>
+      <input type="submit" value="upload" />
+    </form>
+
+    <h1>Posts</h1>
+    <div class="showPost">
+      <% user.posts.forEach(function(obj){ %>
+      <div class="card">
+        <div class="card-top">
+          <img src="/images/DP/<%=user.dp%>" alt="bc" class="left" />
+          <div class="right"><%=user.username%></div>
+        </div>
+        <img src="/images/uploads/<%= obj.imageUrl %>" alt="acs" class="i-g" />
+        <div
+          style="
+            background-color: aqua;
+            margin: 0;
+            border-radius: 0 0 15px 15px;
+          "
+        >
+          <%= obj.postText %>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
