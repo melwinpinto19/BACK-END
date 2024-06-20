@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.f-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  /* background-color: beige; */
+  height: 10vh;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.navbar .left {
+  font-size: 1.7rem;
+}
+
+.navbar .right {
+  display: flex;
+  gap: 100px;
+}
+
+.navbar .right .l,
+.navbar .right .r {
+  display: flex;
+  gap: 20px;
+}
+.l a,
+.r a {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+
+.line {
+  height: 5px;
+  background-color: rgb(189, 185, 185);
+}
+
+.main {
+  height: calc(90vh - 5px);
+  display: flex;
+}
+.main .options {
+  width: 16%;
+  height: 100%;
+  /* background-color: blue; */
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  gap: 15px;
+}
+.main .options li {
+  list-style: none;
+}
+.main .content {
+  width: 84%;
+  max-height: 100%;
+  /* background-color: beige; */
+  padding-top: 40px;
+  padding-left: 10px;
+  overflow: auto;
+}
+.content h1 {
+  font-weight: 500;
+}
+.line1 {
+  width: 70%;
+  height: 2px;
+  background-color: gray;
+  margin-top: 20px;
+}
+
+.select-img {
+  margin-top: 20px;
+  display: flex;
+  gap: 50px;
+  justify-content: start;
+}
+
+#select-img-lbl {
+  background-color: blue;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+form input {
+  background-color: rgb(206, 204, 204);
+}
+
+form .heading {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.product-name {
+  margin-top: 20px;
+}
+
+.product-name input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 350px;
+  padding: 10px;
+}
+
+.product-price-discount {
+  margin-top: 20px;
+}
+
+form .stock {
+  margin-top: 20px;
+}
+
+.product-price-discount input,
+.stock input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  padding: 10px;
+}
+
+input[name="category"] {
+  width: 300px;
+}
+
+form .heading:nth-child(2) {
+  margin-top: 40px;
+}
+
+.panel-details input {
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  padding: 10px;
+}
+
+.addProduct {
+  margin-top: 30px;
+}
+
+.addProduct {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: royalblue;
+  padding: 10px 30px;
+}
+
+.add-product {
+  color: grey;
+}
+
+.addBtn {
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: royalblue;
+  width: 150px;
+  height: 40px;
+}
+
+.error-msg,
+.success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  height: 40px;
+  min-width: 200px;
+  border-radius: 20px;
+  display: none;
+  justify-content: space-around;
+  padding: 5px 10px;
+}
+
+.success {
+  background-color: royalblue;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+}
+
+.eachProduct {
+  width: 250px;
+  height: 270px;
+  background-color: red;
+}
+
+.eachProduct .top {
+  height: 75%;
+}
+
+.eachProduct .top img {
+  object-fit: contain;
+  height: 80%;
+  width: 80%;
+}
+
+.eachProduct .bottom {
+  height: 25%;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.eachProduct .bottom .right {
+  height: 30px;
+  width: 30px;
+  background-color: aliceblue;
+  border-radius: 50%;
+}

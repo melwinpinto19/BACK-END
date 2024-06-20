@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+  </head>
+  <body class="f-c">
+    <div class="logo">Scatch</div>
+    <div class="register f-c">
+      <p>welcome to <span>Scatch</span></p>
+      <p>create your account</p>
+      <form action="/register" method="post" class="f-c">
+        <input
+          type="text"
+          name="username"
+          placeholder="username"
+          class="input"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="email"
+          class="input"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          class="input"
+          required
+        />
+        <input type="submit" value="Create my account" />
+      </form>
+    </div>
+    <div class="or-btn f-c">Or</div>
+    <div class="login f-c">
+      <p>Login your account</p>
+      <form action="/login" method="post" class="f-c">
+        <input
+          type="text"
+          name="username"
+          placeholder="username"
+          class="input"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          class="input"
+          required
+        />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>

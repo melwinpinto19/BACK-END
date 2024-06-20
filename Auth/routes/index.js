@@ -1,7 +1,7 @@
 /*
 Authentication & authorization:
 passport pkg contains all the code for login & register
-passport-local pkg is an statergy like 'login with google' 'login with gitub'
+passport-local pkg is an statergy like 'login with google' 'login with github'
 passport-local-mongoose pkg contains encryption & decryption related code
 */
 

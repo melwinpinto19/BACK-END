@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/cart.css" />
+  </head>
+  <body>
+    <div class="navbar f-c">
+      <div class="left">Cart.</div>
+      <div class="right">
+        <div class="l"><a href="/home">Home</a><a href="#">Products</a></div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="cart-items">
+      <% cart.forEach(obj=>{ if(obj!==null) {%>
+      <div class="cart-item">
+        <div class="left">
+          <div
+            class="top f-c"
+            style="background-color: <%=obj.backgroundColor%>"
+          >
+            <img src="./images/products/<%=obj.imageUrl%>" alt="No Image" />
+          </div>
+          <div class="bottom" style="background-color: <%=obj.panelColor%>">
+            <div class="name"><%=obj.name%></div>
+            <div class="qty f-c">
+              <div class="minus f-c">-</div>
+              <div class="value f-c">1</div>
+              <div class="plus f-c">+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <p style="font-weight: 600">Price Breakdown</p>
+          <div class="m-10 flex">
+            <div class="d1">Total MRP</div>
+            <div class="d2"><%=obj.price%></div>
+          </div>
+          <div class="m-10 flex">
+            <div class="d1">Discount on MRP</div>
+            <div class="d2">₹<%=obj.discount%></div>
+          </div>
+          <div class="m-10 flex">
+            <div class="d1">Platform Fee</div>
+            <div class="d2">₹50</div>
+          </div>
+          <div class="m-10 flex">
+            <div class="d1">Shipping Fee</div>
+            <div class="d2">FREE</div>
+          </div>
+          <div class="line1"></div>
+          <% let a=obj.price-obj.discount+50; %>
+          <div class="flex">
+            <div class="d1">Total Amount</div>
+            <div
+              class="d2 total-amt"
+              style="color: lightgreen; text-decoration: underline"
+              id="<%=a%>"
+            >
+              ₹<%=a %>
+            </div>
+          </div>
+          <div class="btns">
+            <div class="place-order-btn f-c">Place Order</div>
+            <div class="remove-btn f-c" id="<%=obj._id %>">Remove</div>
+          </div>
+        </div>
+      </div>
+      <% }}); %>
+    </div>
+    <script src="/javascripts/cart.js"></script>
+  </body>
+</html>

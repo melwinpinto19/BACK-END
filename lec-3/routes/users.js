@@ -24,7 +24,6 @@ module.exports = mongoose.model("user", userSchema);
 //   id: 101,
 // });
 
-
 // -----------------------------READ--------------------------------------------------
 // finding all the documents from the collection
 // let data = await user.find();
@@ -34,3 +33,5 @@ module.exports = mongoose.model("user", userSchema);
 
 // ---------------------------DELETE-------------------------------------------------
 // let data = await user.findOneAndDelete({ name: "Melwin" });
+
+
